@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        tools:ignore="UseCompoundDrawables,UselessParent">
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/htu"
+            android:contentDescription="@string/logo" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ho_technical_university"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#020D3E" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@layout/layout_border"
+        android:orientation="vertical"
+        android:layout_gravity="center">
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp">
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/rbtGrade"
+                android:onClick="gradeClick"
+                android:text="@string/grade"
+                android:textColor="#020D3E"
+                android:layout_marginRight="60dp"
+                android:layout_marginEnd="60dp" />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/rbtExams"
+                android:onClick="examsClick"
+                android:text="@string/exams_score"
+                android:textColor="#020D3E"
+                android:layout_marginLeft="60dp"
+                android:layout_marginStart="60dp" />
+        </RadioGroup>
+    </LinearLayout>
+
+
+<!--    Main Layout-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+<!--        Grade Layout-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginRight="20dp">
+
+            <LinearLayout
+                android:layout_width="170dp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/txtGrade"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/grades"
+                    android:textSize="25sp"
+                    android:textColor="#020D3E" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="170dp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/credit_hours"
+                    android:textSize="25sp"
+                    android:textColor="#020D3E"
+                    android:layout_marginTop="20dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+<!--        End Grade Layout-->
+
+<!--        Exams Score Layout-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="170dp"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/edtGrade"
+                    android:hint="@string/grade"
+                    android:textSize="20sp"
+                    android:textColor="#020D3E"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"/>
+
+
+           </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="170dp"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/edtCreditH"
+                    android:hint="@string/credit"
+                    android:textSize="20sp"
+                    android:textColor="#020D3E"
+                    android:layout_marginLeft="10dp"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+        </LinearLayout>
+<!--        End of Exams Score Layout-->
+    </LinearLayout>
+<!--    End of Main Layout-->
+
+<!--    Add and Calculate Buttons Layout-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:orientation="vertical"
+        android:layout_gravity="center">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="addClick"
+                android:id="@+id/btnAdd"
+                android:text="@string/add"
+                android:textStyle="bold"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="calcClick"
+                android:id="@+id/btnCalc"
+                android:text="@string/calculate"
+                android:textStyle="bold"/>
+        </LinearLayout>
+    </LinearLayout>
+<!--    End Add and Calculate Buttons Layout-->
+    <!--Gpa Display Layout-->
+    <LinearLayout
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center"
+        android:layout_marginRight="85dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/gpa"
+            android:textStyle="bold"
+            android:textColor="#020D3E"
+            android:textSize="20sp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtGpa"
+            android:text="0.00"
+            android:textStyle="bold"
+            android:textColor="#020D3E"
+            android:textSize="20sp"
+            android:layout_marginLeft="10dp"/>
+
+    </LinearLayout>
+<!--    End of Gpa Display Layout-->
+
+<!--    New and Exit Button Layout-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="newClick"
+            android:id="@+id/btnNew"
+            android:text="@string/news"
+            android:layout_marginRight="160dp"
+            android:layout_marginEnd="170dp" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="exitClick"
+            android:id="@+id/btnExit"
+            android:text="@string/exit"/>
+
+    </LinearLayout>
+    <!--   End of New and Exit Button Layout-->
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/developed_by_edem"
+            android:textSize="15sp"
+            android:textColor="#020D3E"
+            android:textStyle="italic"/>
+
+    </LinearLayout>
+
+</LinearLayout>

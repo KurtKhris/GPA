@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">GPA Calculator</string>
+    <string name="ho_technical_university">HO TECHNICAL UNIVERSITY</string>
+    <string name="logo">logo</string>
+    <string name="graded">Grade</string>
+    <string name="exams_score">Exams Score</string>
+    <string name="grades">Grade:</string>
+    <string name="grade">Grade</string>
+    <string name="_0">0</string>
+    <string name="credit_hours">Credit Hours:</string>
+    <string name="credit">Credit Hours</string>
+    <string name="credit_hour">Credit Hours:</string>
+    <string name="_s0">0</string>
+    <string name="add">ADD</string>
+    <string name="calculate">CALCULATE</string>
+    <string name="gpa">GPA is:</string>
+    <string name="news">New</string>
+    <string name="exit">Exit</string>
+    <string name="developed_by_edem">Version 5.0 Copyright &#169; Edem 2021</string>
+</resources>
